@@ -7,3 +7,20 @@ body {
 .container {
     margin: 0;
 }
+
+.buttons {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    padding: 40px;
+    max-width: 90%;
+}
+
+.title {
+    font-weight: 600;
+    text-align: center;
+    font-size: 80px;
+    padding: 40px;
+    padding-bottom: 0;
+    margin: 0;
+}
