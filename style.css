@@ -8,12 +8,28 @@ body {
     margin: 0;
 }
 
+.rules {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+}
+
 .buttons {
     display: flex;
     gap: 60px;
     justify-content: center;
     padding: 40px;
     max-width: 90%;
+}
+
+.buttons img {
+    max-width: 150px;
+    padding: 30px;
+    background: transparent;
+}
+
+.buttons button :hover {
+    border-color: darkcyan;
 }
 
 .title {
@@ -38,7 +54,7 @@ body {
 }
 
 footer {
-    background-color: azure;
+    background-color: rgb(80, 9, 9);
     padding: 25px;
     color: white;
     margin: 0px;
