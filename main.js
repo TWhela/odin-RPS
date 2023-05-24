@@ -10,7 +10,7 @@ const options = ["rock", "paper", "scissors"];
 const container = document.querySelector(".container");
 const rockButton = documenmt.getElementsByClassName("rock");
 const paperButton = documemt.getElementsByClassName("paper");
-const scissorsButtom = document.getElementsByClassName("scissors");
+const scissorsButton = document.getElementsByClassName("scissors");
 const result = document.createElement('p');
 const computerScoreDisplay = document.getElementsByClassName("computer-score");
 const playerScoreDisplay = document.getElementsByClassName("player-score");
@@ -30,11 +30,11 @@ function chooseScissors() {
 //Compare scores and declare winner
 function declareWinner() {
     if (playerScore > compScore)
-        result.textContent = "Fantastic! You've won the game!"
+        result.textContent = "Fantastic! You've won the game!";
     else if (compScore > playerScore)
-        result.textContent = "Game Over! The Computer won!"
+        result.textContent = "Game Over! The Computer won!";
     else
-        result.textContent = "TIE!"
+        result.textContent = "TIE!";
 }
 function addPlayAgain() {
     const playAgain = document.createElement('button');
@@ -105,7 +105,7 @@ paperButton[0].addEventListener("click", () => {
     choosePaper();
     playRound();
 });
-scissorsButtom[0].addEventListener("click", () => {
+scissorsButton[0].addEventListener("click", () => {
     chooseScissors();
     playRound();
 });
