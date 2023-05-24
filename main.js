@@ -21,7 +21,7 @@ function chooseRock() {
 }
 function choosePaper() {
     playerChoice = "paper";
-    return playerChoice
+    return playerChoice;
 }
 function chooseScissors() {
     playerChoice = "scissors";
