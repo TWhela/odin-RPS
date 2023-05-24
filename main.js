@@ -8,8 +8,8 @@ let roundResult = "";
 const options = ["rock", "paper", "scissors"];
 // Links
 const container = document.querySelector(".container");
-const rockButton = documenmt.getElementsByClassName("rock");
-const paperButton = documemt.getElementsByClassName("paper");
+const rockButton = document.getElementsByClassName("rock");
+const paperButton = document.getElementsByClassName("paper");
 const scissorsButton = document.getElementsByClassName("scissors");
 const result = document.createElement('p');
 const computerScoreDisplay = document.getElementsByClassName("computer-score");
