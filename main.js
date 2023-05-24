@@ -27,6 +27,30 @@ function chooseScissors() {
     playerChoice = "scissors";
     return playerChoice;
 }
+//Compare scores and declare winner
+function declareWinner() {
+    if (playerScore > compScore)
+        result.textContent = "Fantastic! You've won the game!"
+    else if (compScore > playerScore)
+        result.textContent = "Game Over! The Computer won!"
+    else
+        result.textContent = "TIE!"
+}
+function addPlayAgain() {
+    const playAgain = document.createElement('button');
+    playAgain.classList.add("playAgain");
+    playAgain.textContent = "Play Again?";
+    playAgain.addEventListener("click", resetGame);
+    container.appendChild(playAgain);
+}
+function resetGame() {
+    result.textContent = "";
+    const playAgain = document.querySelector(".playAgain");
+    container.removeChild(playAgain);
+    round = 0;
+    computerScoreDisplay[0].textContent = `Computer Score: ${compScore}`;
+    playerScoreDisplay[0].textContent = `Player Score: ${playerScore}`;
+}
 // Play Game
 function playRound() {
     computerChoice = options[Math.floor(Math.random() * 3)];
@@ -57,4 +81,31 @@ function playRound() {
             playerScore += 1;
             roundResult = "You have won this round!";
     }
+    result.textContent = `Result: ${roundResult}`;
+    result.classList.add("result");
+    container.appendChild(result);
+    round++;
+    computerScoreDisplay[0].textContent = `Computer Score: ${compScore}`;
+    playerScoreDisplay[0].textContent = `Player Score: ${playerScore}`;
+    if (round === 5) {
+        declareWinner();
+        playerScore = 0;
+        compScore = 0;
+        addPlayAgain();
+    }
+    if (round > 5) {
+        resetGame();
+    }
 }
+rockButton[0].addEventListener("click", () => {
+    chooseRock();
+    playRound();
+});
+paperButton[0].addEventListener("click", () => {
+    choosePaper();
+    playRound();
+});
+scissorsButtom[0].addEventListener("click", () => {
+    chooseScissors();
+    playRound();
+});

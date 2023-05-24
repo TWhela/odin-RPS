@@ -59,3 +59,26 @@ footer {
     color: white;
     margin: 0px;
 }
+
+.result {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.rock .paper .scissors {
+    display: flex;
+}
+
+.playAgain {
+    display: flex;
+    margin-left: 45%;
+    margin-right: 40%;
+    margin-bottom: 13px;
+    background-color: rgb(80, 9, 9);
+    color: white;
+    padding: 15px;
+    border-radius: 7px;
+    align-self: center;
+    font-size: 30px;
+}
